@@ -6,7 +6,7 @@ namespace Stack
 {
     class Stack
     {
-        private List<Object> _stack;
+        private readonly List<Object> _stack;
 
         public Stack()
         {
