@@ -7,10 +7,11 @@ namespace StackOverflow
         static void Main(string[] args)
         {
 
-            var post = new Post();
-
-            post.Title = "Post title";
-            post.Description = "Body of post...";
+            var post = new Post
+            {
+                Title = "Post title",
+                Description = "Body of post..."
+            };
 
             post.UpVote();
             post.UpVote();
