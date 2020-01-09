@@ -7,10 +7,10 @@ namespace StackOverflow
     class Post
     {
         private int _votes;
-        private DateTime _creationDateTime;
+        private readonly DateTime _creationDateTime;
         public string Title { get; set; }
         public string Description { get; set; }
-        
+
 
         public Post()
         {
@@ -20,18 +20,26 @@ namespace StackOverflow
 
         public void UpVote()
         {
-            _votes = _votes + 1;
+            _votes += 1;
 
         }
 
         public void DownVote()
         {
-            _votes = _votes - 1;
+            _votes -= 1;
         }
 
         public int CurrentVotes()
         {
             return _votes;
+        }
+
+        public void PostInfo()
+        {
+            Console.WriteLine($"Title: {Title}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Votes: {CurrentVotes()}");
+            Console.WriteLine($"Date of creation: {_creationDateTime}");
         }
 
     }

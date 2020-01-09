@@ -20,11 +20,7 @@ namespace StackOverflow
             post.DownVote();
             post.DownVote();
 
-            Console.WriteLine($"Title: {post.Title}");
-            Console.WriteLine($"Description: {post.Description}");
-            Console.WriteLine($"Votes: {post.CurrentVotes()}");
-
-
+            post.PostInfo();
         }
     }
 }
