@@ -17,15 +17,14 @@ namespace Stopwatch
 
         public void Start()
         {
-            if (_isRunning == false)
-            {
-                _startTime = DateTime.Now;
-                _isRunning = true;
-            }
-            else
+            if (_isRunning == true)
             {
                 throw new InvalidOperationException("Stopwatch already running");
             }
+
+            _startTime = DateTime.Now;
+            _isRunning = true;
+
         }
 
         public void Stop()
